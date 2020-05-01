@@ -86,7 +86,7 @@ module VagrantPlugins
           end
 
           if !env[:machine].provider_config.vm_integration_services.empty?
-            env[:ui].detail("Setting VM Integration Services")
+            env[:ui].detail(I18n.t("vagrant.hyperv_setting_enhanced_session"))
 
             env[:machine].provider_config.vm_integration_services.each do |key, value|
               state = value ? "enabled" : "disabled"
